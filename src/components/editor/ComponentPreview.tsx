@@ -26,6 +26,14 @@ import NumberInputPreview from '~components/editor/previews/NumberInputPreview'
 import BreadcrumbPreview from './previews/BreadcrumbPreview'
 import BreadcrumbItemPreview from './previews/BreadcrumbItemPreview'
 
+export const NucleusButton = ({ children }) => (
+  <button type="button">{children}</button>
+)
+
+NucleusButton.defaultProps = {
+  children: 'My Button',
+}
+
 const ComponentPreview: React.FC<{
   componentName: string
 }> = ({ componentName, ...forwardedProps }) => {
@@ -154,6 +162,14 @@ const ComponentPreview: React.FC<{
       return <SelectPreview component={component} />
     case 'NumberInput':
       return <NumberInputPreview component={component} />
+    case 'NucleusButton':
+      return (
+        <PreviewContainer
+          component={component}
+          type={NucleusButton}
+          {...forwardedProps}
+        />
+      )
     default:
       return null
   }

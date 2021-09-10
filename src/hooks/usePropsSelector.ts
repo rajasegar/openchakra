@@ -12,6 +12,8 @@ const usePropsSelector = (propsName: string) => {
     addActiveProps(propsName)
   }, [addActiveProps, propsName])
 
+  debugger
+
   const value = useSelector((state: RootState) => {
     const component =
       state.components.present.components[state.components.present.selectedId]

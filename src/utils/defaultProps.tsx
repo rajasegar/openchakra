@@ -131,9 +131,13 @@ type PreviewDefaultProps = {
   ListItem?: PropsWithForm<any>
   Center?: PropsWithForm<CenterProps>
   Container?: PropsWithForm<ContainerProps>
+  NucleusButton?: PropsWithForm<any>
 }
 
 export const DEFAULT_PROPS: PreviewDefaultProps = {
+  NucleusButton: {
+    children: 'My Button',
+  },
   AlertDescription: {
     children: 'Alert description',
   },
@@ -279,8 +283,14 @@ export const DEFAULT_PROPS: PreviewDefaultProps = {
 }
 
 export const getDefaultFormProps = (type: ComponentType) => {
+  debugger
   //@ts-ignore
   const chakraDefaultProps = Chakra[type].defaultProps
   // @ts-ignore
-  return { ...chakraDefaultProps, ...DEFAULT_PROPS[type]?.form }
+
+  if (type === 'NucleusButton') {
+    return { ...DEFAULT_PROPS.NucleusButton }
+  } else {
+    return { ...chakraDefaultProps, ...DEFAULT_PROPS[type]?.form }
+  }
 }

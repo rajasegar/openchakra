@@ -101,6 +101,7 @@ export const menuItems: MenuItems = {
   Textarea: {},
   Menu: { soon: true },
   Tab: { soon: true },
+  NucleusButton: {},
   /*"Tabs",
   "TabList",
   "TabPanel",
@@ -108,6 +109,7 @@ export const menuItems: MenuItems = {
 }
 
 export const componentsList: ComponentType[] = [
+  // export const componentsList: string[] = [
   'Accordion',
   'AccordionIcon',
   'AccordionItem',
@@ -156,6 +158,7 @@ export const componentsList: ComponentType[] = [
   'ListItem',
   'Menu',
   'NumberInput',
+  'NucleusButton',
   'Progress',
   'Radio',
   'RadioGroup',

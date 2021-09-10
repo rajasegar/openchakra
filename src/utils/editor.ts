@@ -70,6 +70,7 @@ export const COMPONENTS: (ComponentType | MetaComponentType)[] = [
   'ListMeta',
   'InputGroupMeta',
   'BreadcrumbMeta',
+  'NucleusButton',
 ]
 
 export const AccordionWhitelist: (

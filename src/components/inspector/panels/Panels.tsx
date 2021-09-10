@@ -48,6 +48,7 @@ import NumberInputPanel from '~components/inspector/panels/components/NumberInpu
 import AspectRatioPanel from '~components/inspector/panels/components/AspectRatioPanel'
 import BreadcrumbPanel from '~components/inspector/panels/components/BreadcrumbPanel'
 import BreadcrumbItemPanel from '~components/inspector/panels/components/BreadcrumbItemPanel'
+import NucleusButtonPanel from '~components/inspector/panels/components/NucleusButtonPanel'
 
 const Panels: React.FC<{ component: IComponent; isRoot: boolean }> = ({
   component,
@@ -112,6 +113,7 @@ const Panels: React.FC<{ component: IComponent; isRoot: boolean }> = ({
       {type === 'Breadcrumb' && <BreadcrumbPanel />}
       {type === 'BreadcrumbItem' && <BreadcrumbItemPanel />}
       {type === 'BreadcrumbLink' && <LinkPanel />}
+      {type === 'NucleusButton' && <NucleusButtonPanel />}
     </>
   )
 }
